@@ -22,7 +22,12 @@ class Chronometer {
   }
 
   computeTwoDigitNumber(value) {
-    value.slice 
+    const valueAsAString = value.toString();
+      if (valueAsAString.length === 1) {
+      return "0"+valueAsAString
+    } else {
+      return valueAsAString;
+    }
   }
 
   stop() {
@@ -37,3 +42,4 @@ class Chronometer {
     // ... your code goes here
   }
 }
+
